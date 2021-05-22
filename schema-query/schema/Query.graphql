@@ -1,0 +1,15 @@
+
+
+# Pontos de entradas da sua API!, onde você acessa o grafo, nos nós
+# consulta ola retorna uma String, se colocar ! significa que ela é obrigada a retornar string
+type Query {
+  ola: String
+  horaAtual: Date
+  usuarioLogado: Usuario
+  produtoEmDestaque: Produto
+  numerosMegaSena: [Int!]!
+  usuarios: [Usuario]
+  usuario(id: ID): Usuario
+  perfis: [Perfil]
+  perfil(id : Int) : Perfil
+}

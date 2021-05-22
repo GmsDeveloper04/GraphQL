@@ -1,0 +1,62 @@
+{
+  #ola
+  #horaCerta
+  #usuarioLogado {
+    #id
+    #nome
+    #email
+    #idade
+    #salario
+    #vip
+    #chiclete
+  #}
+  #produtoEmDestaque {
+    #nome
+    #preco
+    #precoComDesconto
+    #desconto
+  #}
+  #numerosMegaSena
+	#usuarios {
+    #id
+    #nome
+    #perfil {
+     # id
+     # nome
+    #}
+  #} 
+  #usuario(id: 1){
+    #id
+    #nome
+  #}
+  #perfis {
+    #id
+    #nome
+  #}
+  
+  #perfil(id: 2) {
+    #id
+    #nome
+  #}
+  usuarios {
+  	...usuarioCompleto
+  }
+  usuario(id: 1){
+    ...usuarioCompleto
+  }
+}
+
+fragment usuarioCompleto on Usuario{
+  id
+  nome
+  email
+  idade
+  salario
+  vip
+  chiclete
+  status
+  perfil {
+    id
+    nome
+  }
+}
